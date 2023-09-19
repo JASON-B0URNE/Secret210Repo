@@ -40,10 +40,10 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
   -The development enviornment allows the developer to test new features without destroying the existing application. It gives the developer the opportunity to find bugs and test the security of the application. The live server enviornment is where users can interact with and use the application. The live server is in the real world, with real people and security threats.
 
 3. What is the purpose of using a code versioning tool (i.e. Git)?
-  -
+  -The purpose of a code versioning tool is to provide a log for developers to monitor how their application changes over time. These tools allow developers to confidently change code while knowing they can revert to a previous version. It also allows a team of developers to work simultaneously on an application and quickly download each others changes. 
 
 4. What is the difference between a CSS rule with an *element* selector (i.e. h1, p, div etc.) and one with a *class* selector (i.e. .task, .task-done etc.)? When would you use each?
-  -An element selects all the instances of that html tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraphs '<p></p>' in the html file. 
+  -An element selector chooses all the instances of that html tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraphs <p></p> in a html file. Element selectors are useful for providing uniform style changes in an html document. A class selector chooses specific elements placed in a class. An example where a class selector would be helpful is changing the style of a specific heading elements that display important legal information. Class selectors are useful for providing specific style changes in a html document.
 
 5. What are the advantages of putting your styles in a separate .css stylesheed instead of in the '<style>' element of '<head'?
   -
