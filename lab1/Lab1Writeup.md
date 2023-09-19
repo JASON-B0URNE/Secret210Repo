@@ -6,19 +6,21 @@ Lab 1
 
 ## Executive Summary:
 
-Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Docker is used in order to deploy a local version of your application. The live version of the web application is deployed using Amazon AWS resources. 
+Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Docker is used in order to deploy a local version of the application, and the live version of the web application is deployed using Amazon AWS resources. 
+
+## Design Overview
 
 ### Web Page
-![Example Screenshots](./Screenshot (152).png)
+![Screenshot of the webpage ](/lab1/images/webpage.png)
 
 ### Amazon AWS Instance
-![Example Screenshots]("Screenshot (150).png")
+![Screenshot of the Amazon AWS instance](/lab1/images/amazon.png)
 
 ### Apache Web Server
-![Example Screenshots]("Screenshot (153).png")
+![Screenshot of current status of the apache2 web server](/lab1/images/apache.png)
 
 ### Docker Container
-![Example Screenshots]("Screenshot (154).png")
+![Screenshot the Docker Desktop application](/lab1/images/docker.png)
 
 ### File Descriptions
 
@@ -27,21 +29,21 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
 * js/scipt.js - Provides a script to show the submitted form in JSON format
 * resources/bkg_pic.png - Background image for the website  
 * resources/DroidobeshDepot-gxmVe.otf - Custom Star Wars font for the header.
-* favicon.ico - CR2-D2 page icon
+* favicon.ico - R2-D2 page icon
 
 ## Questions:
 
 1. What is the purpose of using Docker containers?
-  -
+  -The Docker container provides a local test enviornment for applications. Docker provides a sandbox where features can be tested before being deployed on the live internet. 
 
 2. Why is it useful to have both a development environment and a live server enviornment?
-  -
+  -The development enviornment allows the developer to test new features without destroying the existing application. It gives the developer the opportunity to find bugs and test the security of the application. The live server enviornment is where users can interact with and use the application. The live server is in the real world, with real people and security threats.
 
 3. What is the purpose of using a code versioning tool (i.e. Git)?
   -
 
 4. What is the difference between a CSS rule with an *element* selector (i.e. h1, p, div etc.) and one with a *class* selector (i.e. .task, .task-done etc.)? When would you use each?
-  -
+  -An element selects all the instances of that html tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraphs '<p></p>' in the html file. 
 
 5. What are the advantages of putting your styles in a separate .css stylesheed instead of in the '<style>' element of '<head'?
   -
@@ -62,10 +64,12 @@ JavaScript does extremely loose comparisons. Therefore if (thisVar == 0) will ev
 
 ## Conclusions :
 
-- Use nodejs to create an API
-- Install packages using npm
-- Create an SSL certificate
-- Create firewall rules to allow traffic
+- Configure and run an Amazon AWS cloud server
+- Install and configure a Docker container
+- Install and configure an Apache2 web server
+- Pass user entered data into a JSON string
+- Create and design a web page
+- Use a code repository tool to dynamically change source code
 
 ## References
 
