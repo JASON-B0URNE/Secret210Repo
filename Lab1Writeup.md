@@ -8,14 +8,17 @@ Lab 1
 
 Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Docker is used in order to deploy a local version of your application. The live version of the web application is deployed using Amazon AWS resources. 
 
-### User Endpoint
-![Example Screenshots](./img/user.png)
+### Web Page
+![Example Screenshots](./Screenshot (152).png)
 
-### Tasks Endpoint
-![Example Screenshots](./img/tasks.png)
+### Amazon AWS Instance
+![Example Screenshots]("Screenshot (150).png")
 
-### Google Login
-![Example Screenshots](./img/auth.png)
+### Apache Web Server
+![Example Screenshots]("Screenshot (153).png")
+
+### Docker Container
+![Example Screenshots]("Screenshot (154).png")
 
 ### File Descriptions
 
