@@ -45,14 +45,14 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
 4. What is the difference between a CSS rule with an *element* selector (i.e. h1, p, div etc.) and one with a *class* selector (i.e. .task, .task-done etc.)? When would you use each?
   -An element selector chooses all the instances of that html tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraphs <p></p> in a html file. Element selectors are useful for providing uniform style changes in an html document. A class selector chooses specific elements placed in a class. An example where a class selector would be helpful is changing the style of a specific heading elements that display important legal information. Class selectors are useful for providing specific style changes in a html document.
 
-5. What are the advantages of putting your styles in a separate .css stylesheed instead of in the '<style>' element of '<head'?
-  -
+5. What are the advantages of putting your styles in a separate .css stylesheed instead of in the '<style>' element of '<head'>?
+  -An advantage 
 
 6. How do web browsers choose which CSS to use for an HTML element whe the CSS rules contradict each other? What is the order of precedence for CSS rules?
   -Web browsers follow a specificity hierarchy in determining which CSS rule to apply. The specificity hierarchy in order of most to least prevalent is: inline styles, IDs, classes, and elements. If there are two contradictory rules then the latest rule takes the precedence.
 
 7. Why should you disable directory access for your server?
-  -
+  -Directory access needs to be disabled because sensitive user information can be found in log and database files. If a hacker was able to see the directory they could gain insights into how the web application acts that would allow them to deploy exploits against the system.
 
 ## Lessons Learned:
 
