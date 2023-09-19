@@ -10,6 +10,8 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
 
 ## Design Overview
 
+
+
 ### Web Page
 ![Screenshot of the webpage ](/lab1/images/webpage.png)
 
@@ -46,7 +48,7 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
   -An element selector chooses all the instances of that html tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraphs <p></p> in a html file. Element selectors are useful for providing uniform style changes in an html document. A class selector chooses specific elements placed in a class. An example where a class selector would be helpful is changing the style of a specific heading elements that display important legal information. Class selectors are useful for providing specific style changes in a html document.
 
 5. What are the advantages of putting your styles in a separate .css stylesheed instead of in the '<style>' element of '<head'>?
-  -An advantage 
+  -An advantage is that the style of the entire page can be instantly changed. Instead of having to edit all of the code in the html document a new style sheet can be attatched giving the site a whole new feel. A good example of this is the website CSS Zen Garden where the same HTML content is given a totally different look and feel because of the external style sheet.
 
 6. How do web browsers choose which CSS to use for an HTML element whe the CSS rules contradict each other? What is the order of precedence for CSS rules?
   -Web browsers follow a specificity hierarchy in determining which CSS rule to apply. The specificity hierarchy in order of most to least prevalent is: inline styles, IDs, classes, and elements. If there are two contradictory rules then the latest rule takes the precedence.
@@ -74,4 +76,4 @@ JavaScript does extremely loose comparisons. Therefore if (thisVar == 0) will ev
 ## References
 
 https://www.w3schools.com/css/css_specificity.asp
-
+https://www.csszengarden.com/
