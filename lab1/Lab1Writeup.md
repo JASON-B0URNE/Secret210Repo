@@ -49,7 +49,7 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
   -
 
 6. How do web browsers choose which CSS to use for an HTML element whe the CSS rules contradict each other? What is the order of precedence for CSS rules?
-  -
+  -Web browsers follow a specificity hierarchy in determining which CSS rule to apply. The specificity hierarchy in order of most to least prevalent is: inline styles, IDs, classes, and elements. If there are two contradictory rules then the latest rule takes the precedence.
 
 7. Why should you disable directory access for your server?
   -
@@ -73,6 +73,5 @@ JavaScript does extremely loose comparisons. Therefore if (thisVar == 0) will ev
 
 ## References
 
-https://nodejs.org/docs/latest/api/  
-https://certbot.eff.org/  
-https://docs.aws.amazon.com/network-firewall/latest/developerguide/rule-groups.html
+https://www.w3schools.com/css/css_specificity.asp
+
