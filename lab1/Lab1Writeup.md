@@ -58,11 +58,13 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
 
 ## Lessons Learned:
 
-### JavaScript Comparisons  
+### Styling a Specific Condition in CSS
 
-JavaScript does extremely loose comparisons. Therefore if (thisVar == 0) will evaluate true if thisVar = 0 or null or “” or false. This problem often arises when doing an if statement where you want to check if something is not blank but 0 is a good value. To solve this problem use === or !==. These mean an exact comparison, not a loose comparison. Therefore if (thisVar === “”) and thisVar = 0 it will be false. On the other hand if (thisVar == “”) and thisVar = 0 it will evaluate true.
+During lab 1B I ran into difficulties selecting specific HTML conditions. I wanted to color my checkbox orange after it was check done. I made several attempts to adjust the style but everything I tried did not work. After some research in w3schools, I realized that the provided code created a pseudo element for the checkbox when it was checked, and that I need to style the pseudo element. With this knowledge I was able to make the proper changes in the CSS.
 
-*There should be 3 lessons learned in your write-up, not just one.*
+### Syncing the Git Repository on the Live Server
+
+Early on in Lab 1A I was confused why the live server was not reflecting the changes I was pushing to my git repository. I kept seeing the local changes on my docker container, but these changes were not mirrored on the live website. After reading the command list on git
 
 ## Conclusions :
 
@@ -77,3 +79,5 @@ JavaScript does extremely loose comparisons. Therefore if (thisVar == 0) will ev
 
 https://www.w3schools.com/css/css_specificity.asp
 https://www.csszengarden.com/
+https://www.w3schools.com/CSS/
+
