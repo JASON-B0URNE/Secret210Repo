@@ -49,7 +49,7 @@ Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Do
 
 4. What is the difference between a CSS rule with an *element* selector (i.e. h1, p, div etc.) and one with a *class* selector (i.e. .task, .task-done etc.)? When would you use each?
 
--An element selector chooses all the instances of that html tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraphs <p></p> in a html file. Element selectors are useful for providing uniform style changes in an html document. A class selector chooses specific elements placed in a class. An example where a class selector would be helpful is changing the style of a specific heading elements that display important legal information. Class selectors are useful for providing specific style changes in a html document.
+-An element selector chooses all the instances of that html tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraphs tags in a HTML file. Element selectors are useful for providing uniform style changes in an html document. A class selector chooses specific elements placed in a class. An example where a class selector would be helpful is changing the style of a specific heading elements that display important legal information. Class selectors are useful for providing specific style changes in a HTML document.
 
 5. What are the advantages of putting your styles in a separate .css stylesheed instead of in the '<style>' element of '<head'>?
 
