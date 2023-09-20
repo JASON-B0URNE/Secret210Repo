@@ -10,7 +10,11 @@ Labs 1B and 1B implement HTML and CSS to generate and style a basic web page. Do
 
 ## Design Overview
 
-I was responsible 
+I was responsible to create a webpage that displayed a user task list. This task list needed to display a due date, task description, checkbox, and a delete icon. Lab 1A focused entirely on establishing the structure of this webpage with HTML. This page also needed to utilize a header, navbar, and a form where a user could input data.
+
+In Lab 1B the focus changed to styling the webpage with CSS. I was responsible for linking an external CSS stylesheet and applying various classes and IDs to style the webpage. I added dynamic changes to the task list, which changed the task description and checkbox once a task was marked complete. These changes did not change the content of the page, but they significantly changed the look and feel of the page.
+
+All of my code was stored in a Git repository that logged my changes over time. This Git repository was stored locally on my computer and I observed how my changes affected the webpage via Docker. A Docker container acted as a test web server enviornment where I could monitor the affect of my changes. Once I was satisified with the functionality of my page I deployed it to the internet via an Amazon AWS web server. The Amazon AWS web server was running Apache services that were accessible via http. 
 
 ### Web Page
 ![Screenshot of the webpage ](/lab1/images/webpage.png)
