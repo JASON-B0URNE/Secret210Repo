@@ -73,6 +73,10 @@ During lab 1B I ran into difficulties selecting specific HTML conditions. I want
 
 Early on in Lab 1A I was confused why the live server was not reflecting the changes I was pushing to my git repository. I kept seeing the local changes on my docker container, but these changes were not mirrored on the live website. After reading the command list on git I realized that local versions of git repositories are asynchronous, and that I need to manually sync the changes onto the live server. After running the correct command I was able to view my changes on the live server. I realized that this asynchronous handling of data also help preserve a local backup copy of a previous iteration, and not erase another user's changes if they were working on the same files.
 
+### Disabiling Directory Access on the Apache2 Web Server
+
+Another problem that I ran into during the lab was that I had difficulty disabiling the directory access. 
+
 ## Conclusions :
 
 - Configure and run an Amazon AWS cloud server
