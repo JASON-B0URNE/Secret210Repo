@@ -6,11 +6,11 @@ Lab 1
 
 ## Executive Summary:
 
-Labs 1a and 1b implement HTML and CSS to generate and style a basic web page. Docker is used in order to deploy a local version of the application, and the live version of the web application is deployed using Amazon AWS resources. 
+Labs 1B and 1B implement HTML and CSS to generate and style a basic web page. Docker is used in order to deploy a local version of the application, and the live version of the web application is deployed using Amazon AWS resources. 
 
 ## Design Overview
 
-
+I was responsible 
 
 ### Web Page
 ![Screenshot of the webpage ](/lab1/images/webpage.png)
@@ -75,7 +75,7 @@ Early on in Lab 1A I was confused why the live server was not reflecting the cha
 
 ### Disabiling Directory Access on the Apache2 Web Server
 
-Another problem that I ran into during the lab was that I had difficulty disabiling the directory access. 
+Another problem that I ran into during Lab 1A was that I had difficulty disabiling the directory access. This was because I did not have my source folder specified in the setting file. This was a difficult bug to figure out, because I had all of the settings inputted correctly but the web server was not reflecting my changes. After browsing the help docs on apache I was able to discover that I needed to input the directory containing all my web files. After specifying this directory on the Amazon AWS server the directory view was successfully disabled. 
 
 ## Conclusions :
 
@@ -92,3 +92,4 @@ Another problem that I ran into during the lab was that I had difficulty disabil
 - https://www.csszengarden.com/
 - https://www.w3schools.com/CSS/
 - https://git-scm.com/docs/git
+- https://httpd.apache.org/
