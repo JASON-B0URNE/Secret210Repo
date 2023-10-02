@@ -2,7 +2,7 @@
 ## Introduction:
 Samuel Brescia  
 2 October 2023  
-Lab 2 
+Lab 2
 
 ## Executive Summary:
 
