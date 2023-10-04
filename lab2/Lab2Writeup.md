@@ -16,17 +16,20 @@ In Lab 1B, the focus changed to styling the webpage with CSS. I was responsible 
 
 All of my code was stored in a Git repository that logged my changes over time. This Git repository was stored locally on my computer and I observed how my changes affected the webpage via Docker. A Docker container acted as a test web server environment where I could monitor the effect of my changes. Once I was satisfied with the functionality of my page, I deployed it to the internet via an Amazon AWS web server. The Amazon AWS web server was running Apache services that were accessible via http. 
 
-### Web Page
-![Screenshot of the webpage ](/lab1/images/webpage.png)
+### UML Diagram
+![UML Diagram of the Process](/lab2/images/umlDiagram.png)
 
-### Amazon AWS Instance
-![Screenshot of the Amazon AWS instance](/lab1/images/amazon.png)
+### CNAME Redirect
+![Screenshot of the CNAME Redirect](/lab2/images/cnameRedirect.png)
 
-### Apache Web Server
-![Screenshot of current status of the apache2 web server](/lab1/images/apache.png)
+### DNS Records
+![Screenshot of the DNS records](/lab2/images/dnsRecords.png)
 
-### Docker Container
-![Screenshot the Docker Desktop application](/lab1/images/docker.png)
+### HTTPS Enabled with Certificate
+![Screenshot of the HTTPS TLS Certificate](/lab2/images/httpsCert.png)
+
+### Data in Local Browser Database
+![Screenshot of the Browser Database in Browser Developer Tools](/lab2/images/localBrowserDB.png)
 
 ### File Descriptions
 
