@@ -35,7 +35,7 @@ All of my code was stored in a Git repository that logged my changes over time. 
 
 * index.html - Provides the skeleton and content of the HTML page
 * css/styles.css - Provides the styling for the HTML page
-* js/scipt.js - Provides a script to show the submitted form in JSON format
+* js/scipt.js - Allows the user to create, read, update, and delete tasks in the task list. This is implemented by storing the list in the browser storage and then manipulating the stored data. 
 * resources/bkg_pic.png - Background image for the website  
 * resources/DroidobeshDepot-gxmVe.otf - Custom Star Wars font for the header.
 * favicon.ico - R2-D2 page icon
