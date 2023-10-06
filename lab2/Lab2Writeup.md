@@ -1,4 +1,3 @@
-
 ## Introduction:
 Samuel Brescia  
 2 October 2023  
@@ -6,15 +5,13 @@ Lab 2
 
 ## Executive Summary:
 
-Labs 1B and 1B implement HTML and CSS to generate and style a basic web page. Docker is used to deploy a local version of the application, and the live version of the web application is disblayed using Amazon AWS resources. 
+Labs 2a and 2b implemented JavaScript and HTTPS to add functionality and security to the web application. JavaScript was utilized to save a user task list within the local browser database. Security was added via HTTPS traffic, which was allowed by running certbot on the AWS server. 
 
 ## Design Overview
 
-I was responsible for creating a webpage that displayed a user task list. This task list needed to display a due date, task description, checkbox, and a delete icon. Lab 1A focused entirely on establishing the structure of this webpage with HTML. This page also needed to utilize a header, navbar, and a form where a user could input data.
+In lab 2a, I was responsible for creating a dynamic task list that changed based on user input. This meant using JavaScript to create, read, update, and delete different elements of the list. The JavaScript manipulated a Database in the browser's local storage and then changed the DOM based on the information stored there. This allowed the data to persist after closing the tab or browser.
 
-In Lab 1B, the focus changed to styling the webpage with CSS. I was responsible for linking an external CSS stylesheet and applying various classes and IDs to style the webpage. I added dynamic changes to the task list, which changed the task description and checkbox once a task was marked complete. These changes did not change the content of the page, but they significantly changed the look and feel of the page.
-
-All of my code was stored in a Git repository that logged my changes over time. This Git repository was stored locally on my computer and I observed how my changes affected the webpage via Docker. A Docker container acted as a test web server environment where I could monitor the effect of my changes. Once I was satisfied with the functionality of my page, I deployed it to the internet via an Amazon AWS web server. The Amazon AWS web server was running Apache services that were accessible via http. 
+In lab 2b, I was responsible for creating a domain name for my website and enabling HTTPS. The domain name was created by establishing a static IP address for my webpage and then creating an A record that linked a domain name to that IP address. An additional CNAME record was created to redirect a different alias domain to the main domain. Lastly, certbot was used to generate an HTTPS certificate and enable traffic over HTTPS. 
 
 ### UML Diagram
 ![UML Diagram of the Process](/lab2/images/umlDiagram.png)
@@ -26,7 +23,7 @@ All of my code was stored in a Git repository that logged my changes over time. 
 ![Screenshot of the DNS records](/lab2/images/dnsRecords.png)
 
 ### HTTPS Enabled with Certificate
-![Screenshot of the HTTPS TLS Certificate](/lab2/images/httpsCert.png)
+![Screenshot of the HTTPS Certificate](/lab2/images/httpsCert.png)
 
 ### Data in Local Browser Database
 ![Screenshot of the Browser Database in Browser Developer Tools](/lab2/images/localBrowserDB.png)
@@ -42,55 +39,65 @@ All of my code was stored in a Git repository that logged my changes over time. 
 
 ## Questions:
 
-1. What is the purpose of using Docker containers?
+1. What are two differences and similarities between JavaScript and a previous language you have used (e.g. C++ or Python)? (Think of differences and similarities that are more unique to these 2 languages, not all languages in general.)
 
-- The Docker container provides a local test environment for applications. Docker provides a sandbox where features can be tested before being deployed on the live internet. 
+- One difference between JavaScript and C++ is that C++ is a lot more strict when it comes to declaring variables or comparing variable types. JavaScript easily initializes any variable type (dynamically typed), while in C++, each variable type needs to be clearly defined (statically typed). Additionally, in C++, only variables of the same type can be compared, while JavaScript easily compares all variable types. Another difference is that JavaScript is focused on programming web applications, while C++ is a more universal language. JavaScript has built-in objects that manipulate the DOM and provide functionality to web pages. C++ is universally used and has thousands of libraries that are implemented in many different uses. 
 
-2. Why is it useful to have both a development environment and a live server environment?
- 
-- The development environment allows the developer to test new features without destroying the existing application. It allows the developer to find bugs and test the security of the application. The live server environment is where users can interact with and use the application. The live server is in the real world, with real people and security threats.
+- One similarity between C++ and JavaScript is they have similar syntax: ending lines with a comment, method of declaring functions, method of declaring loops, and method of accessing functions. Another similarity between C++ and JavaScript is that both are used in the server back-end. JavaScript provides a connection between back-end computation and front-end functionality. C++ is lightweight and fast, which makes it useful for efficiently processing requests and other resource-intensive tasks. 
 
-3. What is the purpose of using a code versioning tool (i.e. Git)?
+2. What is the difference between JSON and JavaScript objects?
 
-- The purpose of a code versioning tool is to provide a log for developers to monitor how their application changes over time. These tools allow developers to confidently change code while knowing they can revert to a previous version. It also allows a team of developers to work simultaneously on an application and quickly download each other's changes. 
+- JSON is a method of storing data in a string that contains a key and a value. Without a compiler or interpreter giving meaning to the data in the string it is only a string. On the other hand, JavaScript objects are parsed versions of JSON strings, meaning that the keys and values are associated with each other in computer memory. JavaScript objects can then be called as variables in functions or can be used for other computational purposes. Many coding languages use JSON to transmit and store data, but each language parses the JSON as its own object. 
 
-4. What is the difference between a CSS rule with an *element* selector (i.e. h1, p, div, etc.) and one with a *class* selector (i.e. .task, .task-done, etc.)? When would you use each?
+3. If you open your web page in two different browsers, will changes on one appear on the other? Why or why not?
 
-- An element selector chooses all the instances of that HTML tag. An example where an element selector would be helpful is if you wanted to apply a specific font to all of the paragraph tags in an HTML file. Element selectors are useful for providing uniform style changes in an HTML document. A class selector chooses specific elements placed in a class. An example where a class selector would be helpful is changing the style of specific heading elements that display important legal information. Class selectors are useful for providing specific style changes in an HTML document.
+- No, the changes will not save over different browsers. The javascript code saves the task list in the local storage of the browser in use. Unfortunately, the data cannot be transferred between different browsers because they have separate local storage locations.
 
-5. What are the advantages of putting your styles in a separate .css stylesheet instead of in the '<style>' element of '<head'>?
+4. How long did you spend on this lab?
 
-- An advantage is that the style of the entire page can be instantly changed. Instead of having to edit all of the code in the HTML document a new style sheet can be attached giving the site a whole new feel. A good example of this is the website CSS Zen Garden where the same HTML content is given a different look and feel because of the external style sheet.
+- I spent approximately 3 hours on this lab. 
 
-6. How do web browsers choose which CSS to use for an HTML element when the CSS rules contradict each other? What is the order of precedence for CSS rules?
- 
-- Web browsers follow a specificity hierarchy in determining which CSS rule to apply. The specificity hierarchy in order of most to least prevalent is inline styles, IDs, classes, and elements. If there are two contradictory rules then the latest rule takes precedence.
+5. What is the difference between HTTP and HTTPS?
 
-7. Why should you disable directory access for your server?
-  
-- Directory access needs to be disabled because sensitive user information can be found in log and database files. If a hacker was able to see the directory they could gain insights into how the web application acts that would allow them to deploy exploits against the system.
+- HTTP is a protocol that transmits web data in plaintext. This means that if you submit data via a GET or POST request the information is transmitted without encryption. HTTPS adds an S for secure. This means that the data is encrypted before transmission, stopping nefarious actors from easily obtaining sensitive information.
+
+6. What does the A record do in your DNS domain?
+
+- The A record associates a domain name with a static IP address. It associates that this domain name is found at this location and sends the user to that IP address. 
+
+7. Which key does the `certbot` tool send to Let's Encrypt to be embedded in the certificate; the public key or the private key?
+
+- The public key is embedded in the certificate. 
+
+8. What is the TTL setting in DNS, what are the units, and what does it do?
+
+- The TTL stands for Time to Live. Its units are in seconds, and it states the amount of time the record should be stored on the computer. A computer wants to work as efficiently as possible, so if you frequently go to a website, it does not want to keep requesting the DNS record for that location. Instead, it will store the information on the computer, and the TTL represents the amount of time that the record should be stored.
+
+9. The DNS tool is new this semester. What did you like about it? What could we do to improve it? (Any answer gets full credit.)
+
+- I liked that it was intuitive to use. It was easy for me to make an A record and the txt record. The difficult part was making a CNAME record. It would have been useful to provide example text of how we needed to type the domains as the placeholder text in each of the text boxes. Another solution could be more straightforward instructions on the formatting.
 
 ## Lessons Learned:
 
-### Do not Recursively Change the Ownership of the Whole etc/ Folder
+### Be Cautious When Recursively Changing File Ownership
 
-During lab 1B I ran into difficulties selecting specific HTML conditions. I wanted to color my checkbox orange after it was marked complete. I made several attempts to adjust the style, but everything I tried did not work. After some research in w3schools, I realized that the provided code created a pseudo-element for the checkbox after it was completed, and that I needed to style the pseudo-element. With this knowledge, I was able to make the proper changes in the CSS.
+During lab 2b, I was running a command that enabled the apache2 service to access the certificate files. I was trying to change the ownership of a file stored in a directory, that was stored in the /etc/ directory. Instead of specifying that specific directory, I recursively changed the ownership of the entire /etc/ directory. This mistake changed the ownership of the sudoers file, which then removed my access to the sudo command. After multiple attempts to troubleshoot the issue, I ended up deleting that AWS instance and creating another. From this, I learned the importance of double-checking commands that I run in the command line and the importance of taking snapshots of a virtual machine's state. 
 
 ### Creating a Page Redirect with a CNAME Record
 
-Early on in Lab 1A, I was confused as to why the live server was not reflecting the changes I was pushing to my Git repository. I kept seeing the local changes on my docker container, but these changes were not mirrored on the live website. After reading the command list on git I realized that local versions of git repositories are asynchronous and that I need to manually sync the changes onto the live server. After running the correct command I was able to view my changes on the live server. I realized that this asynchronous handling of data also helps preserve a local backup copy of a previous iteration and does not erase another user's local changes.
+I had difficulty creating a page redirect in the late stages of lab 2b. I followed the lab instructions, but the DNS page would not let me generate a CNAME record. I tried formatting the domain names differently, but no matter what I tried, it did not work. After talking with the TAs, I learned the required format for the CNAME record, and after fixing it, my redirect worked. I learned how to properly format the CNAME record, but I also learned that I need to quickly reach out to TAs when I am facing a problem that I cannot solve. 
 
-### Handiling 
+### Handling Updates to a Task in the Task List
 
-Another problem that I ran into during Lab 1A was that I had difficulty disabling the directory access. This was because I did not have my source folder specified in the settings file. This was a difficult bug to figure out because I had all of the settings inputted correctly, but the web server was not reflecting my changes. After browsing the help docs on Apache, I was able to discover that I needed to input the directory containing all my web files. After specifying this directory on the Amazon AWS server the directory view was successfully disabled. 
+During lab 2a, I had difficulties displaying a task as checked once the boolean value had been changed in the database. It was difficult for me to conceptually determine how to display the task as checked. I tried multiple ways but realized that I was repeating code. Eventually, I determined that I could check the boolean value while the list was being printed on the screen. At this point in the code, I could initiate a change in the CSS class. I reached this conclusion by mapping out the process on paper and walking through each of the different steps. In the future, I need to do better at making a game plan for how I will implement functions before I begin programming. 
 
 ## Conclusions :
 
-- Create, Read, Update and Read user data with Javascript
+- Create, Read, Update, and Read user data with Javascript
 - Create a domain on a DNS server that points to a static IP address
 - Utilize local browser storage to store user input
 - Manipulate HTML and CSS using Javascript functions
-- Enable traffic over HTTPS and generate a TLS certificate
+- Enable traffic over HTTPS and generate a certificate
 
 ## References
 
