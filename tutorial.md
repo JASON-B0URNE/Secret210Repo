@@ -18,3 +18,4 @@ Have you ever been filling out a form on a website when due to an uncontrollable
 </body>
 </html>
 ```
+##### Then select save as, and change the save as type from .txt to all files. Then type app.html, and save the file on your desktop. Then navigate to your desktop and double click on app.html.
