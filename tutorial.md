@@ -171,3 +171,5 @@ function buttonClick(event) {
 </body>
 </html>
 ```
+
+Now if we look at the contents of our local storage we will see that we successfully stored data. We were able to store a key-database and the value as another key-value pair for the user input, but now we have another problem to address. How do we not clear the contents of the input element when hitting the save button, and how do we load the stored value when reloading the page? Right now if you refresh the web application you will see that the value remains in the local storage, but our <input> tag has no value associated with it. 
