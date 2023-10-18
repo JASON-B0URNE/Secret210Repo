@@ -20,7 +20,7 @@ Open notepad and paste the following:
 </html>
 ```
 
-Then select _save as_, and change the _save as type_ from .txt to all files. Name the file as _app.html_ and save the file on your desktop. Now navigate to your desktop and double click on app.html. 
+Then select _save as_, and change the _save as type_ from .txt to all files. Name the file as _app.html_ and save the file on your desktop. Now navigate to your desktop and double click on app.html, so that it opens in a web browser. 
 
 You should see something like:
 
@@ -42,9 +42,19 @@ The text **This is a Heading** and **This is a paragraph** are known as differen
 <button onclick="buttonClick()">Click Me</button>
 
 <script>
-buttonClick() {
+function buttonClick() {
   alert("You Clicked The Button");
 }
+</script>
+
 </body>
 </html>
 ```
+
+Edit your app.html file with the following code and then refresh your web application in your browser. You should now see a button that says _Click Me_. Click the button and see what happens.
+
+You should see something like: 
+
+
+
+In this example we added a button element. This button element is linked to a JavaScript function via the **onclick** attribute. This HTML attribute tells the browser to run JavaScript once the button is clicked. We stored our JavaScript between the **<script>...</script>** tags. This tells the browser where it can find our JavaScript code. 
