@@ -172,4 +172,38 @@ function buttonClick(event) {
 </html>
 ```
 
-Now if we look at the contents of our local storage we will see that we successfully stored data. We were able to store a key-database and the value as another key-value pair for the user input, but now we have another problem to address. How do we not clear the contents of the input element when hitting the save button, and how do we load the stored value when reloading the page? Right now if you refresh the web application you will see that the value remains in the local storage, but our <input> tag has no value associated with it. 
+Now if we look at the contents of our local storage we will see that we successfully stored data. We were able to store a key-database and the value as another key-value pair for the user input, but now we have another problem to address. How do we not clear the contents of the input element when hitting the save button? One possible solution is that we can change the attribute **value** on the <input> tag to refresh with our saved user input. This can be implemented with the following code: 
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<form onsubmit="buttonClick(event)">
+  <input type="text" name="userInput" placeholder="Type Here"></input>
+  <br>
+  <button type="submit">Save</button>
+  <br>
+</form>
+<script>
+function buttonClick(event) {
+  let formData = new FormData(event.currentTarget);
+  let json = Object.fromEntries(formData);
+  let jsonString = JSON.stringify(json);
+  localStorage.setItem("database", jsonString);
+  const element = document.getElementsByTagName("input");
+	element[0].setAttribute("value", jsonString);
+}
+</script>
+
+</body>
+</html>
+```
+
+
