@@ -140,4 +140,34 @@ function buttonClick(event) {
 </html>
 ```
 
-Now when you click the save button it should alert you with the text that you typed into the text box. The code **new FormData(event.currentTarget)** pulls the submitted data within the form, and the following line **Object.fromEntries(formData)** forms a JavaScript object. JavaScript objects store
+Now when you click the save button it should alert you with the text that you typed into the text box. The code **new FormData(event.currentTarget)** pulls the submitted data within the form, and the following line **Object.fromEntries(formData)** forms a JavaScript object. JavaScript objects store data in a key->value format. Meaning that a specific "keyword" is matched with a specific value. In this case we select the userInput key, which is attached to the value that the user types into the <input> tag. Now that we can select the user data we can now store that value in the local storage with the following code:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<form onsubmit="buttonClick(event)">
+  <input type="text" name="userInput" placeholder="Type Here"></input>
+  <br>
+  <button type="submit">Save</button>
+  <br>
+</form>
+<script>
+function buttonClick(event) {
+  let formData = new FormData(event.currentTarget);
+  let json = Object.fromEntries(formData);
+  let jsonString = JSON.stringify(json);
+  localStorage.setItem("database", jsonString);
+}
+</script>
+
+</body>
+</html>
+```
