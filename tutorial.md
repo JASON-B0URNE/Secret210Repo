@@ -76,6 +76,7 @@ You can then select the **>>** two arrows and select application from the drop d
 #### Implementing JavaScript with the Browser Local Storage
 Now that we know how to access the contents of the browser local storage we can now use JavaScript to store data there. In order to store data in the local storage we need an HTML element that can recieve user input. To do this we will use the form and input tag. We can implement these elements with the following code:
 
+##### Add the HTML Form
 ```html
 <!DOCTYPE html>
 <html>
@@ -88,7 +89,41 @@ Now that we know how to access the contents of the browser local storage we can 
 <p>This is a paragraph.</p>
 
 <form onsubmit="buttonClick()">
-  <input type="text" name="userInput">Type Here</input>
+  <input type="text" name="userInput" placeholder="Type Here"></input>
+  <br>
+  <button type="submit">Save</button>
+  <br>
+</form>
+<script>
+function buttonClick() {
+  alert("You Clicked The Button");
+}
+</script>
+
+</body>
+</html>
+```
+
+Your application should know look like this, and clicking on the save button should bring up the same alert prompt:
+
+
+
+Now we need to read the data submitted within the input task. We do this by utilizing event handlers within JavaScript. Events are different things that happen on a webpage, and help execute JavaScript when an action is preformed. We can use an event handler to read the input of the form. In order to do this we can implement the following code:
+
+##### Add the Event Handler
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<form onsubmit="buttonClick()">
+  <input type="text" name="userInput" placeholder="Type Here"></input>
   <br>
   <button type="submit">Save</button>
   <br>
