@@ -142,6 +142,7 @@ function buttonClick(event) {
 
 Now when you click the save button it should alert you with the text that you typed into the text box. The code **new FormData(event.currentTarget)** pulls the submitted data within the form, and the following line **Object.fromEntries(formData)** forms a JavaScript object. JavaScript objects store data in a key->value format. Meaning that a specific "keyword" is matched with a specific value. In this case we select the userInput key, which is attached to the value that the user types into the <input> tag. Now that we can select the user data we can now store that value in the local storage with the following code:
 
+##### Store Input in the Browser Local Storage
 ```html
 <!DOCTYPE html>
 <html>
@@ -174,6 +175,7 @@ function buttonClick(event) {
 
 Now if we look at the contents of our local storage we will see that we successfully stored data. We were able to store a key-database and the value as another key-value pair for the user input, but now we have another problem to address. How do we not clear the contents of the input element when hitting the save button? One possible solution is that we change how the JavaScript handles the event. A simple solution can be implemented with one line of code:
 
+##### Prevent the Input Box from Clearing while Saving
 ```html
 <!DOCTYPE html>
 <html>
@@ -205,4 +207,45 @@ function buttonClick(event) {
 </html>
 ```
 
+Now after hitting the save button our input stays in the text box, but the value is updated in the local storage. The code **event.preventDefault()** stops the HTML from preforming the normal functions of the submit form. This means that the data in the input box will not be wiped, and that our JavaScript code will also be executed which saves values to local storage. Our application appears to be functioning normally except for one bug. After refresing the page, closing the tab, or closing the browser our data that is stored in local storage is not populating the input field. In order to do this we need to set the <input> element attribute **value** to whatever is stored in the local storage. This can be implemented with the following code:
+
+##### Populate the Input Field When Loading the Page
+'''html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body onload="fillInput(event)">
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<form onsubmit="buttonClick(event)">
+  <input type="text" name="userInput" placeholder="Type Here">
+  <br>
+  <button type="submit">Save</button>
+  <br>
+</form>
+<script>
+function buttonClick(event) {
+  event.preventDefault();
+  let formData = new FormData(event.currentTarget);
+  let json = Object.fromEntries(formData);
+  let jsonString = JSON.stringify(json);
+  localStorage.setItem("database", jsonString);
+}
+function fillInput(event) {
+  event.preventDefault();
+  let jsonObject = JSON.parse(localStorage.getItem('database'));
+  let element = document.getElementsByName("userInput");
+  if (element.length > 0) {
+    element[0].setAttribute("value", jsonObject.userInput);
+  }
+}
+</script>
+
+</body>
+</html>
+'''
 
