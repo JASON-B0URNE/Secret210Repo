@@ -89,7 +89,7 @@ Now that we know how to access the contents of the browser local storage we can 
 <p>This is a paragraph.</p>
 
 <form onsubmit="buttonClick()">
-  <input type="text" name="userInput" placeholder="Type Here"></input>
+  <input type="text" name="userInput" placeholder="Type Here">
   <br>
   <button type="submit">Save</button>
   <br>
@@ -123,7 +123,7 @@ Now we need to read the data submitted within the input task. We do this by util
 <p>This is a paragraph.</p>
 
 <form onsubmit="buttonClick(event)">
-  <input type="text" name="userInput" placeholder="Type Here"></input>
+  <input type="text" name="userInput" placeholder="Type Here">
   <br>
   <button type="submit">Save</button>
   <br>
@@ -154,7 +154,7 @@ Now when you click the save button it should alert you with the text that you ty
 <p>This is a paragraph.</p>
 
 <form onsubmit="buttonClick(event)">
-  <input type="text" name="userInput" placeholder="Type Here"></input>
+  <input type="text" name="userInput" placeholder="Type Here">
   <br>
   <button type="submit">Save</button>
   <br>
@@ -172,7 +172,7 @@ function buttonClick(event) {
 </html>
 ```
 
-Now if we look at the contents of our local storage we will see that we successfully stored data. We were able to store a key-database and the value as another key-value pair for the user input, but now we have another problem to address. How do we not clear the contents of the input element when hitting the save button? One possible solution is that we can change the attribute **value** on the <input> tag to refresh with our saved user input. This can be implemented with the following code: 
+Now if we look at the contents of our local storage we will see that we successfully stored data. We were able to store a key-database and the value as another key-value pair for the user input, but now we have another problem to address. How do we not clear the contents of the input element when hitting the save button? One possible solution is that we change how the JavaScript handles the event. A simple solution can be implemented with one line of code:
 
 ```html
 <!DOCTYPE html>
@@ -186,19 +186,18 @@ Now if we look at the contents of our local storage we will see that we successf
 <p>This is a paragraph.</p>
 
 <form onsubmit="buttonClick(event)">
-  <input type="text" name="userInput" placeholder="Type Here"></input>
+  <input type="text" name="userInput" placeholder="Type Here">
   <br>
   <button type="submit">Save</button>
   <br>
 </form>
 <script>
 function buttonClick(event) {
+  event.preventDefault();
   let formData = new FormData(event.currentTarget);
   let json = Object.fromEntries(formData);
   let jsonString = JSON.stringify(json);
   localStorage.setItem("database", jsonString);
-  const element = document.getElementsByTagName("input");
-  element[0].setAttribute("value", jsonString);
 }
 </script>
 
