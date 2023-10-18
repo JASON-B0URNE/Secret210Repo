@@ -132,7 +132,7 @@ Now we need to read the data submitted within the input task. We do this by util
 function buttonClick(event) {
   let formData = new FormData(event.currentTarget);
   let json = Object.fromEntries(formData);
-  alert(json);
+  alert(json.userInput);
 }
 </script>
 
@@ -140,4 +140,4 @@ function buttonClick(event) {
 </html>
 ```
 
-Testing
+Now when you click the save button it should alert you with the text that you typed into the text box. The code **new FormData(event.currentTarget)** pulls the submitted data within the form, and the following line **Object.fromEntries(formData)** forms a JavaScript object. JavaScript objects store
