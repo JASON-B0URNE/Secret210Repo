@@ -74,4 +74,31 @@ You can then select the **>>** two arrows and select application from the drop d
 
 
 #### Implementing JavaScript with the Browser Local Storage
-Now that we know how to access the contents of the browser local storage we can now use JavaScript to store data there. 
+Now that we know how to access the contents of the browser local storage we can now use JavaScript to store data there. In order to store data in the local storage we need an HTML element that can recieve user input. To do this we will use the form and input tag. We can implement these elements with the following code:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<form onsubmit="buttonClick()">
+  <input type="text" name="userInput">Type Here</input>
+  <br>
+  <button type="submit">Save</button>
+  <br>
+</form>
+<script>
+function buttonClick() {
+  alert("You Clicked The Button");
+}
+</script>
+
+</body>
+</html>
+```
