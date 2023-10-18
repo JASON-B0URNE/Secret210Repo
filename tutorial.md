@@ -1,4 +1,5 @@
 ### Using the Browser Local Storage with JavaScript
+###### This tutorial is meant for users with a Windows machine.
 #### Introduction
 Have you ever been filling out a form on a website when due to an uncontrollable circumstance you lose the information in that text field? That is most likely because the web application was not utilizing the browser's local storage. Browsers are responsible for parsing multiple coding languages allowing a user to seamlessly interact with a web application. The majority of web applications are stored on servers which can be connected to via the internet. Often the browser is concerned with 3 coding languages: HTML, CSS, and JavaScript. For the purposes of this tutorial we will be mostly concerned with HTML (which provides web applications with structure) and JavaScript (which provides web applications with functionality). You can start to develop your own web application right now!
 
@@ -60,4 +61,17 @@ You should see something like:
 
 
 
-In this example we added a button element. This button element is linked to a JavaScript function via the **onclick** attribute. This HTML attribute tells the browser to run JavaScript once the button is clicked. We stored our JavaScript between the **<script>...</script>** tags. This tells the browser where it can find our JavaScript code. We need a way for the browser to link the onclick attribute to our JavaScript stored in the <script> tags. We do this by defining and calling a function. The **function buttonClick() {...}** between the <script> tags defines what JavaScript code needs to be executed when buttonClick() is mentioned in the HTML. Thus, when **onclick="buttonClick()"** is added in the <button> element it tells the browser to execute the JavaScript code defined in our **function buttonClick() {...}**
+In this example we added a button element. This button element is linked to a JavaScript function via the **onclick** attribute. This HTML attribute tells the browser to run JavaScript once the button is clicked. We stored our JavaScript between the **<script>...</script>** tags. This tells the browser where it can find our JavaScript code. We need a way for the browser to link the onclick attribute to our JavaScript stored in the <script> tags. We do this by defining and calling a function. The **function buttonClick() {...}** between the <script> tags defines what JavaScript code needs to be executed when buttonClick() is mentioned in the HTML. Thus, when **onclick="buttonClick()"** is added in the <button> element it tells the browser to execute the JavaScript code defined in our **function buttonClick() {...}**.
+
+#### Getting Started with Browser Local Storage
+
+In a web application their may be situations where data needs to be saved, but the developer does not want to waste storage space on the server with this data. Circumstances where a less secure short term storage can be utilized. The best option in these instances is to use the browser local storage. Data in this storage container is specific to the web application and the browser. Meaning that the data will not be accessible via another browser or another website. You can always examine the contents of the browser local storage by using the key combination -shift- + -ctrl- + -i-. This will open up a subwindow in your browser that looks like:
+
+
+
+You can then select the **>>** two arrows and select application from the drop down window. On the left side menu click on **Local storage**. This screen should look like:
+
+
+
+#### Implementing JavaScript with the Browser Local Storage
+Now that we know how to access the contents of the browser local storage we can now use JavaScript to store data there. 
