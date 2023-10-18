@@ -122,15 +122,17 @@ Now we need to read the data submitted within the input task. We do this by util
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
 
-<form onsubmit="buttonClick()">
+<form onsubmit="buttonClick(event)">
   <input type="text" name="userInput" placeholder="Type Here"></input>
   <br>
   <button type="submit">Save</button>
   <br>
 </form>
 <script>
-function buttonClick() {
-  alert("You Clicked The Button");
+function buttonClick(event) {
+  let formData = new FormData(event.currentTarget);
+  let json = Object.fromEntries(formData);
+  alert(json);
 }
 </script>
 
