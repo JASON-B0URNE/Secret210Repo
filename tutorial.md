@@ -198,7 +198,7 @@ function buttonClick(event) {
   let jsonString = JSON.stringify(json);
   localStorage.setItem("database", jsonString);
   const element = document.getElementsByTagName("input");
-	element[0].setAttribute("value", jsonString);
+  element[0].setAttribute("value", jsonString);
 }
 </script>
 
