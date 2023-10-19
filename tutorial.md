@@ -1,5 +1,6 @@
 ### Using the Browser Local Storage with JavaScript
 **_The Instructions are Specifically for Windows_**
+
 #### Introduction
 Have you ever been filling out a form on a website when due to an uncontrollable circumstance you lose the information in that text field? That is most likely because the web application was not utilizing the browser's local storage. Browsers are responsible for parsing multiple coding languages allowing a user to seamlessly interact with a web application. The majority of web applications are stored on servers which can be connected to via the internet. Often the browser is concerned with 3 coding languages: HTML, CSS, and JavaScript. For the purposes of this tutorial we will be mostly concerned with HTML (which provides web applications with structure) and JavaScript (which provides web applications with functionality). You can start to develop your own web application right now!
 
@@ -248,3 +249,7 @@ function fillInput(event) {
 </body>
 </html>
 ```
+
+In this code we linked the **fillInput** function to run whenever the page is loaded. This function retrieves the data stored in the local storage **JSON.parse(localStorage.getItem('database'))**, and then retrieves the <input> element by its name userInput **document.getElementsByName("userInput")**. If this element exists **element.length > 0**,then it will set its value attribute to whatever is stored in local storage **element[0].setAttribute("value", jsonObject.userInput)**. 
+
+#### Conclusion
