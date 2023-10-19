@@ -25,11 +25,11 @@ Open notepad and paste the following:
 Then select _save as_, and change the _save as type_ from .txt to all files. Name the file as _app.html_ and save the file on your desktop. Now navigate to your desktop and double click on app.html, so that it opens in a web browser. 
 
 You should see something like:
-
+<br><br>
 <img width="285" alt="Basic Web Page" src="https://github.com/JASON-B0URNE/Secret210Repo/assets/106118000/7ad58e54-e57e-4ae0-a59e-e8851a9cb9b4">
 <br>
 Figure 1: Basic Web Page
-<br>
+<br><br>
 The text **This is a Heading** and **This is a paragraph** are known as different elements. Each of these elements form the structure of the web application and provide content. These elements are a huge part of web applications! These elements can display user information, recieve user input, or preform a variety of different functions. The primary coding language that interacts and changes these elements is JavaScript. You likely see JavaScript change your experience on the internet everyday without realizing it. 
 
 #### Getting Started with JavaScript
@@ -61,23 +61,23 @@ function buttonClick() {
 Edit your app.html file with the following code and then refresh your web application in your browser. You should now see a button that says _Click Me_. Click the button and see what happens.
 
 You should see something like: 
-
+<br><br>
 <img width="335" alt="JavaScript Alert" src="https://github.com/JASON-B0URNE/Secret210Repo/assets/106118000/595e6822-050e-47ab-a1d6-ea95fc4078ab">
 <br>
 Figure 2: JavaScript Alert
-<br>
+<br><br>
 In this example we added a button element. This button element is linked to a JavaScript function via the **onclick** attribute. This HTML attribute tells the browser to run JavaScript once the button is clicked. We stored our JavaScript between the **<script>...</script>** tags. This tells the browser where it can find our JavaScript code. We need a way for the browser to link the onclick attribute to our JavaScript stored in the <script> tags. We do this by defining and calling a function. The **function buttonClick() {...}** between the <script> tags defines what JavaScript code needs to be executed when buttonClick() is mentioned in the HTML. Thus, when **onclick="buttonClick()"** is added in the <button> element it tells the browser to execute the JavaScript code defined in our **function buttonClick() {...}**.
 
 #### Getting Started with Browser Local Storage
 
 In a web application their may be situations where data needs to be saved, but the developer does not want to waste storage space on the server with this data. Circumstances where a less secure short term storage can be utilized. The best option in these instances is to use the browser local storage. Data in this storage container is specific to the web application and the browser. Meaning that the data will not be accessible via another browser or another website. You can always examine the contents of the browser local storage by using the key combination -shift- + -ctrl- + -i-. This will open up a subwindow in your browser that looks like:
-
+<br><br>
 <img width="515" alt="Browser Developer Tools" src="https://github.com/JASON-B0URNE/Secret210Repo/assets/106118000/87c9d9c4-5d40-4f70-bfd3-0ec511c680f4">
 <br>
 Figure 3: Browser Developer Tools
-<br>
+<br><br>
 You can then select the **>>** two arrows and select **Application** from the drop down window. On the left side menu click on **Local storage**. This screen should look like:
-
+<br><br>
 <img width="518" alt="Local Storage Under the Application Tab" src="https://github.com/JASON-B0URNE/Secret210Repo/assets/106118000/0278bbd7-f682-4553-9aea-401c60fcb628">
 <br>
 Figure 4: Local Storage Under the Application Tab
@@ -115,11 +115,11 @@ function buttonClick() {
 ```
 
 Your application should know look like this, and clicking on the save button should bring up the same alert prompt:
-
+<br><br>
 <img width="649" alt="Add a Form and Text Input to the Application" src="https://github.com/JASON-B0URNE/Secret210Repo/assets/106118000/66867fde-72fd-41a8-91e7-44990355c781">
 <br>
 Figure 5: Add a Form and Text Input to the Application
-<br>
+<br><br>
 Now we need to read the data submitted within the input task. We do this by utilizing event handlers within JavaScript. Events are different things that happen on a webpage, and help execute JavaScript when an action is preformed. We can use an event handler to read the input of the form. In order to do this we can implement the following code:
 
 ##### Add the Event Handler
