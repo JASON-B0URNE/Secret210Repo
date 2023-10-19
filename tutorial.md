@@ -264,6 +264,6 @@ function fillInput(event) {
 In this code we linked the **fillInput** function to run whenever the page is loaded. This function retrieves the data stored in the local storage **JSON.parse(localStorage.getItem('database'))**, and then retrieves the <input> element by its name userInput **document.getElementsByName("userInput")**. If this element exists **element.length > 0**,then it will set its value attribute to whatever is stored in local storage **element[0].setAttribute("value", jsonObject.userInput)**. 
 
 #### Conclusion
-
+We did it! We were able to utilize both HTML and JavaScript to store and retrieve information from the browser local storage. Remember that no sensitive information should be stored in this local database. It is meant to conviently store short term data that does not need to be stored on a server. Now that you understand the basics it is time for you to explore other implementations of JavaScript and the browser local storage. I reccomend using the resources at [w3schools.com](w3schools.com "w3schools"). Specifically, [HTML Events](https://www.w3schools.com/jsref/dom_obj_event.asp "HTML Events"), [JavaScript Tutorials](https://www.w3schools.com/js/default.asp "JavaScript Tutorials"), [Local Storage](https://www.w3schools.com/jsref/prop_win_localstorage.asp "Local Storage"), [JavaScript and HTML Elements](https://www.w3schools.com/jsref/dom_obj_all.asp "JavaScript and HTML Elements"). 
 
 
